@@ -1,4 +1,4 @@
 ---
 - hosts: remote
   roles:
-  - role: ../../ansible-role-sql-developer
+  - role: ../../ansible-role-jvpn

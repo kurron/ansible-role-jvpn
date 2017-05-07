@@ -1,25 +1,27 @@
 Role Name
 =========
 
-Installation of tools than any self-respecting SQL developer loves and needs.
+Connect to a Juniper VPN under Ubuntu.
 
 Requirements
 ------------
 
-TODO
+`kurron.base`
 
 Role Variables
 --------------
 
-* sql_datagrip_install: true
-* sql_datagrip_version: 2016.2.6
-* sql_mysql_tools_install: true
-* sql_postgresql_tools_install: true
+* jvpn_install: true
+* jvpn_vpn_host: portal.transparent.com
+* jvpn_vpn_port: 443
+* jvpn_vpn_url: url_1
+* jvpn_vpn_realm: Macintosh_Users
+* jvpn_vpn_username: CHANGEME
+* jvpn_vpn_password: CHANGEME
 
 Dependencies
 ------------
-
-* kurron.jdk
+TODO
 
 Example Playbook
 ----------------
@@ -27,7 +29,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-      - { role: kurron.sql-developer, sql_postgresql_tools_install: true }
+      - { role: kurron.jvpn }
 ```
 
 License

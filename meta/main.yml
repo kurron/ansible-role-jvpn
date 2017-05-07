@@ -1,11 +1,11 @@
 galaxy_info:
   author: Ronald D. Kurr
-  description: IDE and tools a SQL developer needs.
+  description: Juniper VPN software for Ubuntu.
   company: jvmguy.com
 
   license: Apache 2
 
-  min_ansible_version: 2.1
+  min_ansible_version: 2.3
 
   github_branch: master
 
@@ -31,13 +31,8 @@ galaxy_info:
     - xenial
 
   galaxy_tags:
-      - development
-      - SQL
-      - JetBrains
-      - DataGrip
-      - MySQL
-      - PostgreSQL
+      - juniper
+      - vpn
 
 dependencies:
-    - { role: kurron.jdk }
-
+    - { role: kurron.base }
