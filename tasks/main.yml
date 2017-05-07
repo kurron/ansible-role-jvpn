@@ -34,6 +34,15 @@
       recurse: yes
   when: jvpn_install
 
+- name: Create Pulse Secure Folder
+  become: no
+  file:
+      path: "{{ansible_user_dir}}/.pulse_secure/network_connect"
+      state: directory
+      mode: 0755
+      recurse: yes
+  when: jvpn_install
+
 - name: Copy Perl Script
   become: no
   copy:
