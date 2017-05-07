@@ -1,0 +1,8 @@
+---
+sql_datagrip_install: true
+sql_datagrip_version: 2017.1.2
+sql_datagrip_share_jdk: true
+
+sql_mysql_tools_install: true
+sql_postgresql_tools_install: true
+
