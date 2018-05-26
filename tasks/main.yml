@@ -4,7 +4,7 @@
   package:
       name: "{{item}}"
       state: present
-  with_items:
+  loop:
   - "zlib1g:i386"
   when: jvpn_install and (ansible_distribution == "Fedora")
 
@@ -13,7 +13,7 @@
   package:
       name: "{{item}}"
       state: present
-  with_items:
+  loop:
   - "zlib1g:i386"
   - "libwww-perl"
   when: jvpn_install and (ansible_distribution == "Ubuntu")
@@ -21,7 +21,7 @@
 - name: Install Required Perl Packages
   become: yes
   command: cpan {{ item }}
-  with_items:
+  loop:
   - "Term::ReadKey"
   when: jvpn_install
 
@@ -51,7 +51,7 @@
       owner: "{{ansible_user_uid}}"
       group: "{{ansible_user_gid}}"
       mode: 0764
-  with_items:
+  loop:
   - "jvpn.pl"
   - "vpn.sh"
   when: jvpn_install
